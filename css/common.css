@@ -1,0 +1,52 @@
+﻿@font-face {
+    font-family:'NanumSquareR';
+    src:url(../font/NanumSquareR.woff) format('woff');
+}
+
+@font-face {
+    font-family:'NanumSquareB';
+    src:url(../font/NanumSquareB.woff) format('woff');
+}
+
+*{margin:0px; padding:0px; box-sizing:border-box; font-family:NanumSquareB; word-break:keep-all;}
+body{position:absolute; width:100%; height:100%; background:#000; overflow:hidden;}
+
+#content_wrap{position:relative; width:100%; height:100%;}
+#content{z-index:998; position:absolute; width:1000px; height:660px; top:50%; left:50%; margin:-330px 0 0 -500px; overflow:hidden; background:url(../images/content_bg.png) no-repeat; background-position:center; background-size:cover;}
+
+/* 정오답 알림 창 */
+#alert_wrap{z-index:99; display:none; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.5);}
+#alert_wrap #alert_msg{position:absolute; display:table; width:400px; height:300px; top:50%; left:50%; margin-top:-150px; margin-left:-200px; background:#41586e; border-radius:20px; font-size:26px; text-align:center; color:#fff;}
+#alert_wrap #alert_msg p{display:table-cell; vertical-align:middle;}
+
+.popup_bg{display:none; position:absolute; top:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:1;}
+.popup_quiz_btn{position:absolute; top:50%; left:50%; margin-left:-221px; margin-top:-77px; width:443px; height:155px; background:url(../images/sudden_btn.png); cursor:pointer;}
+.popup_quiz_btn:hover{background:url(../images/sudden_btn_over.png);}
+.popup_quiz_wrap{display:none; position:absolute; top:50%; left:50%; margin-top:-270px; margin-left:-480px; width:960px; height:540px;  background:#fff; text-align:center;}
+.popup_quiz_close{position:absolute; top:10px; right:10px; width:31px; height:31px; background:url(../images/sudden_close.png); cursor:pointer; z-index:1;}
+.popup_quiz_close:hover{background:url(../images/sudden_close_over.png);}
+.popup_quiz_check{position:absolute; bottom:20px; right:20px; width:170px; height:46px; background:url(../images/sudden_check.png); cursor:pointer; z-index:1;}
+.popup_quiz_check:hover{background:url(../images/sudden_check_over.png);}
+
+/**************  한글프로그램 블록계산식 실습  ***************/
+.table_quiz_wrap .question_wrap{display:table; margin:50px auto 0; width:922px; height:97px;}
+.table_quiz_wrap .question_wrap .question{display:table-cell; vertical-align:middle; text-align:center; width:100%; color:#3c3c3c; font-size:24px;}
+
+.table_wrap{width:100%; height:100%;}
+.cell{position:absolute; display:inline-block; width:180px; height:30px; padding:7px 0; font-size:16px; line-height:16px; border:1px solid #000; text-align:center; cursor:pointer; font-family:NanumGothicB;}
+.cell.select{background:#000; color:#fff;}
+.cell.total{background:#ffe0cb;}
+.cell.total.select{background:#001f34; color:#fff;}
+
+.cell.row1.col1{top:210px; left:120px;}
+
+.doCalc{position:absolute; display:none; top:90px; width:180px; background:#fff; border:1px solid #397ebd; text-align:left; cursor:pointer; font-family:NanumGothicB; z-index:4;}
+.doCalc .depth1{list-style:none;}
+.doCalc .depth1 li{position:relative; font-family:NanumGothicB; padding:7px; font-family:NanumGothicB; line-height:12px; color:#333;}
+.doCalc .depth1 li:hover{background:#d7e5f2; color:#397ebd;}
+.doCalc .depth1 .correct .depth2{display:none;}
+.doCalc .depth1 .correct.on{background:#d7e5f2; color:#397ebd;}
+.doCalc .depth1 .correct.on .depth2{position:absolute; display:inline-block; top:-27px; left:178px; width:160px; list-style:none; background:#fff; border:1px solid #397ebd;}
+
+.quiz_submit{display:none; position:absolute; right:30px; bottom:30px; width:150px; height:40px; padding:11px 0; text-decoration:none; text-align:center; font-size:18px; line-height:18px; background:#208eb7; border-radius:5px; color:#fff; cursor:pointer;}
+.quiz_submit:hover{background:#3db0db;};
